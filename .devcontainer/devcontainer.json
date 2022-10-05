@@ -1,0 +1,15 @@
+{
+  "name": "notes",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "settings": {},
+  "extensions": [
+    "astro-build.astro-vscode"
+  ],
+  "forwardPorts": [
+    3000
+  ],
+  "postCreateCommand": "npm install -g pnpm && cd web && pnpm install",
+  "remoteUser": "node"
+}
