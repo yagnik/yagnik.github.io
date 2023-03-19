@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Orpheus;
+  src: url('/fonts/Orpheus Pro.otf');
+}
+@font-face {
+  font-family: Ivy;
+  src: url('/fonts/IvyMode-Italic.woff2');
+}
+html {
+  @apply antialiased;
+  @apply bg-background-primary;
+  font-family: Orpheus !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Ivy !important;
+}
