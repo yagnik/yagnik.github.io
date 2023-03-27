@@ -28,7 +28,12 @@ export const getPosts = async () => {
   })
 }
 
-export const getPost = async (path) => {
+export const getPostsWithContent = async () => {
+  let posts = await getPosts()
+  return await Promise.all(posts.map(async (post) => await getPost(post.url, false)))
+}
+
+export const getPost = async (path, loadAllPosts) => {
   let pluginData = {
     title: null,
     subTitle: null,
@@ -51,6 +56,7 @@ export const getPost = async (path) => {
       ],
       rehypePlugins: [rehypeSlug, [headingsExtractPlugin, pluginData]],
     },
+    scope: { allPosts: loadAllPosts ? await getPostsWithContent() : [] },
   })
 
   return {

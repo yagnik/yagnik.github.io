@@ -3,36 +3,36 @@ import type { AppProps } from 'next/app'
 import Image from 'next/image'
 import Logo from '../public/logo.svg'
 import Link from 'next/link'
-import { Menu, Transition } from '@headlessui/react'
+import { Menu } from '@headlessui/react'
 import { Fragment } from 'react'
 import { Socials } from '../lib/socials'
 
 function HeadingMenu() {
-  function SubMenu({ items }) {
-    return (
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
-        <Menu.Items className="absolute mt-7 grid divide-y divide-gray-500">
-          {items.map((item, index) => {
-            return (
-              <Menu.Item key={index}>
-                <Link className="py-2 hover:text-text-highlight text-left" href={item.href}>
-                  {item.label}
-                </Link>
-              </Menu.Item>
-            )
-          })}
-        </Menu.Items>
-      </Transition>
-    )
-  }
+  // function SubMenu({ items }) {
+  //   return (
+  //     <Transition
+  //       as={Fragment}
+  //       enter="transition ease-out duration-100"
+  //       enterFrom="transform opacity-0 scale-95"
+  //       enterTo="transform opacity-100 scale-100"
+  //       leave="transition ease-in duration-75"
+  //       leaveFrom="transform opacity-100 scale-100"
+  //       leaveTo="transform opacity-0 scale-95"
+  //     >
+  //       <Menu.Items className="absolute mt-7 grid divide-y divide-gray-500">
+  //         {items.map((item, index) => {
+  //           return (
+  //             <Menu.Item key={index}>
+  //               <Link className="py-2 hover:text-text-highlight text-left" href={item.href}>
+  //                 {item.label}
+  //               </Link>
+  //             </Menu.Item>
+  //           )
+  //         })}
+  //       </Menu.Items>
+  //     </Transition>
+  //   )
+  // }
 
   return (
     <Menu as="nav" className="grid gap-6 grid-flow-col relative content-center">
@@ -49,10 +49,13 @@ function HeadingMenu() {
       <Link className="hover:text-text-highlight" href="/now">
         Now
       </Link>
+      <Link className="hover:text-text-highlight" href="/hire">
+        Hire
+      </Link>
       <Link className="hover:text-text-highlight" href="/about">
         About
       </Link>
-      <SubMenu items={[{ label: 'Notes', href: '/garden/notes' }]} />
+      {/* <SubMenu items={[{ label: 'Notes', href: '/notes' }]} /> */}
     </Menu>
   )
 }
