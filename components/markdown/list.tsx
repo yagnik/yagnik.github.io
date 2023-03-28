@@ -16,13 +16,14 @@ export function List({ allPosts }) {
       {Object.entries(groupedPostsByMonthYear).map(([date, posts]) => (
         <div key={date} className="grid grid-flow-col justify-between">
           <ul className="grid grid-flow-row m-0 list-none">
-            {posts.map((post, index) => (
-              <Link key={index} href={post.path} className="no-underline text-inherit hover:text-text-highlight">
-                <li className=" cursor-pointer before:content-['\22EF\0020'] before:font-black	 opacity-75	hover:opacity-100 inline-block">
-                  {post.frontMatter.title}
-                </li>
-              </Link>
-            ))}
+            {Array.isArray(posts) &&
+              posts.map((post, index) => (
+                <Link key={index} href={post.path} className="no-underline text-inherit hover:text-text-highlight">
+                  <li className=" cursor-pointer before:content-['\22EF\0020'] before:font-black	 opacity-75	hover:opacity-100 inline-block">
+                    {post.frontMatter.title}
+                  </li>
+                </Link>
+              ))}
           </ul>
           <div className="justify-self-end	">
             <div className="mt-10 text-text-secondary" style={{ writingMode: 'vertical-rl' }}>
