@@ -12,7 +12,7 @@ updatedAt: 1673348941099
 <br/>
 <Home.Heading>
 
-# Yagnik's musings on <Colour.Highlight>humanity</Colour.Highlight>, <Colour.Highlight>systems</Colour.Highlight> and everything in the middle
+# On <Colour.Highlight>humanity</Colour.Highlight>, <Colour.Highlight>systems</Colour.Highlight> and everything in the middle
 
 </Home.Heading>
 
