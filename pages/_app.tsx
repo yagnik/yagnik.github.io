@@ -34,6 +34,13 @@ function HeadingMenu() {
   //   )
   // }
 
+  let paths = [
+    // { text: 'Notes', path: '/notes' },
+    // { text: 'Now', path: '/now' },
+    // { text: 'Hire', path: '/hire' },
+    // { text: 'About', path: '/about' },
+  ]
+
   return (
     <Menu as="nav" className="grid gap-6 grid-flow-col relative content-center">
       {/* <div>
@@ -42,19 +49,11 @@ function HeadingMenu() {
           <ChevronDownIcon className="h-5 w-5 text-text-highlight " aria-hidden="true" />
         </Menu.Button>
       </div> */}
-
-      <Link className="hover:text-text-highlight" href="/notes">
-        Notes
-      </Link>
-      <Link className="hover:text-text-highlight" href="/now">
-        Now
-      </Link>
-      <Link className="hover:text-text-highlight" href="/hire">
-        Hire
-      </Link>
-      <Link className="hover:text-text-highlight" href="/about">
-        About
-      </Link>
+      {paths.map((path, index) => (
+        <Link key={index} className="hover:text-text-highlight" href={path.path}>
+          {path.text}
+        </Link>
+      ))}
       {/* <SubMenu items={[{ label: 'Notes', href: '/notes' }]} /> */}
     </Menu>
   )
