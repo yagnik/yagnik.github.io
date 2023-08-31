@@ -12,7 +12,7 @@ updatedAt: 1673348941099
 <br/>
 <Home.Heading>
 
-# On <Colour.Highlight>humanity</Colour.Highlight>, <Colour.Highlight>systems</Colour.Highlight> and everything in the middle
+# Yagnik
 
 </Home.Heading>
 
