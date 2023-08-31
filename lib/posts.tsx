@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
 import wikiLinkPlugin from 'remark-wiki-link'
 import { headingsExtractPlugin, titleExtractPlugin } from './plugins'
-import glob from 'glob'
+import { glob } from 'glob'
 
 const PATH = 'posts'
 const EXTENSION = '.md'
