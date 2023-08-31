@@ -22,7 +22,7 @@ export function Heading({ kind, status, title, subTitle, createdAt, updatedAt })
   )
 }
 
-export function TOC({ headings }) {
+export function TableOfContent({ headings }) {
   return (
     <div className="grid grid-flow-row sticky top-0">
       <h4 className="!mt-[1.2em]">Table of Contents</h4>

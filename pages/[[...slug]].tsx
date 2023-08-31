@@ -1,4 +1,4 @@
-import { Heading, TOC } from '../components/post'
+import { Heading, TableOfContent } from '../components/post'
 import { getPosts, getPost } from '../lib/posts'
 import { MDXRemote } from 'next-mdx-remote'
 import { Components } from '../components/markdown'
@@ -21,7 +21,7 @@ export default function Post({ frontMatter, headings, source }) {
         </div>
         {toc && headings.length > 0 && (
           <div className="hidden md:block">
-            <TOC headings={headings} />
+            <TableOfContent headings={headings} />
           </div>
         )}
       </div>
