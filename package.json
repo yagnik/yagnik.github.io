@@ -60,5 +60,19 @@
       "tailwindcss": {},
       "autoprefixer": {}
     }
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "next/core-web-vitals",
+      "plugin:react-hooks/recommended"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
   }
 }
