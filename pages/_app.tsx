@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Menu } from '@headlessui/react'
 import { Fragment } from 'react'
 import { Socials } from '../lib/socials'
+import Head from 'next/head'
 
 function HeadingMenu() {
   // function SubMenu({ items }) {
@@ -91,6 +92,10 @@ function Footer() {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <link rel="preload" href="/fonts/Orpheus Pro.otf" as="font" type="font/otf" />
+        <link rel="preload" href="/fonts/IvyMode-Italic.woff2" as="font" type="font/woff2" />
+      </Head>
       <Header />
       <Component {...pageProps} />
       <Footer />
