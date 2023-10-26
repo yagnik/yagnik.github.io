@@ -17,9 +17,6 @@ dependencies:
   '@mdx-js/react':
     specifier: ^3.0.0
     version: 3.0.0(@types/react@18.2.33)(react@18.2.0)
-  '@next/font':
-    specifier: ^13.5.6
-    version: 13.5.6
   '@next/mdx':
     specifier: ^13.5.6
     version: 13.5.6(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0)
@@ -345,10 +342,6 @@ packages:
       glob: 7.1.7
     dev: false
 
-  /@next/font@13.5.6:
-    resolution: {integrity: sha512-urmUq05uCVJsBqAAJEV+xK5OTTodrSxdiG+351SOSjlWctywdBM6qX+K9pIe3K48RxjfnxlBbXjGyOJAji+pfw==}
-    dev: false
-
   /@next/mdx@13.5.6(@mdx-js/loader@3.0.0)(@mdx-js/react@3.0.0):
     resolution: {integrity: sha512-2AMyCrz1SxSWNUpADyLz3RbPbq0GHrchbO7Msvg7IsH8MrTw3VYaZSI1KNa6JzZIoykwtNVSEL+uBmPZi106Jw==}
     peerDependencies:
@@ -603,10 +596,6 @@ packages:
 
   /@types/ms@0.7.33:
     resolution: {integrity: sha512-AuHIyzR5Hea7ij0P9q7vx7xu4z0C28ucwjAZC0ja7JhINyCnOw8/DnvAPQQ9TfOlCtZAmCERKQX9+o1mgQhuOQ==}
-    dev: false
-
-  /@types/node@20.5.7:
-    resolution: {integrity: sha512-dP7f3LdZIysZnmvP3ANJYTSwg+wLLl8p7RqniVlV7j+oXSXAbt9h0WIBFmJy5inWZoX9wZN6eXx+YXd9Rh3RBA==}
     dev: false
 
   /@types/node@20.8.9:
@@ -2685,7 +2674,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.5.7
+      '@types/node': 20.8.9
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: false
