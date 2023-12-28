@@ -13,10 +13,10 @@ export default function Post({ frontMatter, headings, source }) {
   const { heading, toc, sidenote } = siteOptions
 
   return (
-    <main className="prose mx-auto px-8 prose-custom md:prose-lg lg:prose-xl max-w-6xl min-h-[85vh] prose-headings:font-normal">
+    <main className="prose mx-auto px-8 prose-custom md:prose-lg lg:prose-xl max-w-6xl min-h-[84vh] prose-headings:font-normal">
       {heading && <Heading {...frontMatter} />}
       <div className="grid  grid-cols-3 md:grid-cols-4 gap-8">
-        <div className={`${sidenote ? 'col-span-3' : 'col-span-3 md:col-span-4'} grid max-w-5xl`}>
+        <div className={`${sidenote || toc ? 'col-span-3' : 'col-span-3 md:col-span-4'} grid max-w-5xl`}>
           <MDXRemote components={Components} {...source} />
         </div>
         {toc && headings.length > 0 && (
