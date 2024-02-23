@@ -34,3 +34,12 @@ export function headingsExtractPlugin(pluginData) {
       }))
   }
 }
+
+export function removePostWipTagPlugin() {
+  return (tree) => {
+    let position = tree.children.findIndex((node) => node.type === 'mdxJsxFlowElement' && node.name === 'WIP')
+    if (position > -1) {
+      tree.children.splice(position + 1, Infinity)
+    }
+  }
+}

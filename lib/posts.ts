@@ -5,7 +5,7 @@ import Matter from 'gray-matter'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
 import wikiLinkPlugin from 'remark-wiki-link'
-import { headingsExtractPlugin, titleExtractPlugin } from './plugins'
+import { headingsExtractPlugin, titleExtractPlugin, removePostWipTagPlugin } from './plugins'
 import { glob } from 'glob'
 
 const PATH = 'posts'
@@ -54,7 +54,7 @@ export const getPost = async (path, loadAllPosts) => {
           },
         ],
       ],
-      rehypePlugins: [rehypeSlug, [headingsExtractPlugin, pluginData]],
+      rehypePlugins: [rehypeSlug, [headingsExtractPlugin, pluginData], removePostWipTagPlugin],
     },
     scope: { allPosts: loadAllPosts ? await getPostsWithContent() : [] },
   })

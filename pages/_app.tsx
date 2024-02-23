@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../public/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Image from 'next/image'
 import Logo from '../public/logo.svg'

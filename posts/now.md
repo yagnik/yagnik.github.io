@@ -2,14 +2,14 @@
 kind: Note
 status: Thought
 site:
-  heading: false
+  heading: true
   toc: false
   sidenote: false
 createdAt: 1673348941099
 updatedAt: 1673348941099
 ---
 
-# Title of the post
+# Now
 
 Subtitle of the post
 

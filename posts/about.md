@@ -3,10 +3,10 @@ status: seed
 kind: Note
 site:
   heading: true
-  tableOfContent: true
+  toc: true
   sidenote: true
 createdAt: 1671022409579
-modifiedAt: 1678038585627
+updatedAt: 1678038585627
 ---
 
 # About
