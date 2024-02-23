@@ -11,7 +11,7 @@ updatedAt: 1673348941099
 
 # Foo
 
-A little about me
+A little about me.
 
 ---
 
